@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let InputValue = document.getElementById('myId').value;
+        // console.log(InputValue);
+
+//      class Animal {
+//            name = "dog"
+//            arms = "two"
+//            legs = "two"
+//            bark(toSay) {
+//                alert(toSay)
+//            }
+//        }
+
+//        var animal = new Animal()
+
+//  animal.bark("Hello");
+
+//        console.log(animal);
+let first_value
+let second_value
+
+let sum;
+
+        const  calculateSum = () => {
+          const resultElement = document.getElementById('result-p');
+          resultElement.textContent = 'Result is; ' + sum
+        }
+
+        const  FValue = (e) => {
+          first_value = +event.target.value
+        }
+
+        const  SValue = (e) => {
+          second_value = +event.target.value
+        }
+    </script>
+    <input type="text" oninput="FValue(event)"/>
+    <button onclick="sum = first_value + second_value">+</button>
+    <button onclick="sum = first_value - second_value">-</button>
+    <input type="text" oninput="SValue(event)"/>
+    <button onclick="calculateSum()">Calculate Result</button>
+    <p id="result-p">Result is:</p>
+</html>
